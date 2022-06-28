@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Quiksand',sans-serif;
+}
+body {
+    background-color: #f8f8f8;
+  
+}
+.box-formulir {
+    width: 50%;
+    margin: 100px auto;
+    border: 0px solid;
+}
+.box {
+    background-color: #FFE4B5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px 0 25px;
+}
+.table-form{
+    width: 100%;
+}
+.input-control{
+padding: 5px 10px;
+font-size: 14px;
+margin: 5px 0px;
+}
+.btn-daftar{
+    background-color: #FF7F00;
+    font-size: 13px;
+    padding: 12px 17px;
+    border:none;
+
+}
+.btn-submit{
+    background-color: #FF0000;
+    font-size: 13px;
+    padding: 12px 17px;
+    border:none;
+
+}
+.btn-batal{
+    background-color:#808080;
+    font-size: 13px;
+    padding: 12px 17px;
+    border:none;
+}
+.btn-daftar:hover{
+cursor: pointer;
+background-color: #FF7F50;
+}
+.btn-batal:hover{
+    cursor: pointer;
+    background-color: #C0C0C0;
+}
+.btn-cetak {
+    display: inline-block;
+    color: #000000;
+    padding: 10px 17px;
+    background-color: #87CEEB;
+    margin-top: 8px ;
+}
+.btn-kembali{
+    display: inline-block;
+    color: #000000;
+    padding: 10px 17px;
+    background-color: #FF7F50;
+    margin-top: 8px ;
+}
+.table-data{
+    width: 100%;
+    margin: 10px auto;
+    border: 0px solid; 
+    margin-bottom: 20px;  
+    margin: 5px 0 25px;
+}
+.table-data tr{
+    height: 35px;
+}
+.table-data tr td:nth-child(1){
+width: 20%;
+}
+.content {
+    width: 70%;
+    padding: 10px;
+    box-sizing:border-box;
+    font-size: 15px;
+}
+h2{
+    color: #000000;
+    margin: 20px auto;
+    
+}
