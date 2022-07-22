@@ -8,7 +8,8 @@
     $qry = mysqli_query($koneksi, "SELECT * FROM siswa 
     inner join kategori on siswa.id_kategori = kategori.id_kategori
     inner join jenis_vaksin on siswa.id_jenis = jenis_vaksin.id_jenis
-    inner join vaksin_ke on siswa.id_ke = vaksin_ke.id_ke where id_siswa = '".$id_siswa."'");
+    inner join vaksin_ke on siswa.id_ke = vaksin_ke.id_ke
+    inner join jadwal1 on siswa.id_jadwal = jadwal1.id_jadwal where id_siswa = '".$id_siswa."'");
     $data_siswa=mysqli_fetch_array($qry);
 ?>
 
@@ -28,7 +29,7 @@
         <div class="col-md-8">
    <div class="form-group">
    <form  action ="" method ='POST'>
- <div class="row">
+                            <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>NIS</label>
@@ -140,6 +141,22 @@
                       </div>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Tanggal Vaksin</label>
+                        <select class="form-control" name="jadwal1" required/>
+                            <option value="<?=$data_siswa['id_jadwal']?>"><?=$data_siswa['tanggal']?></option>
+                            <?php
+                                $qry5=mysqli_query($koneksi, "select * from jadwal1");
+                                while($data_jadwal1=mysqli_fetch_array($qry5)){
+                                    echo '<option value="'.$data_ke1['id_jadwal'].'">'.$data_jadwal1['tanggal'].'</option>';
+                                }
+                            ?>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
                         <div class="item form-group">
 				        <div class="col-md-6 col-sm-6 offset-md-3">
 					    <input type="submit" name="submit" class="btn btn-primary" value="simpan">
@@ -186,6 +203,7 @@
         $kategori = $_POST['kategori'];
         $jenis = $_POST['jenis_vaksin'];
         $ke = $_POST['vaksin_ke'];
+        $jadwal = $_POST['jadwal1'];
         $alamat = $_POST['alamat'];
         
         
@@ -198,6 +216,7 @@
         id_kategori = '".$kategori."',
         id_jenis = '".$jenis."',
         id_ke = '".$ke."',
+        id_jadwal = '".$jadwal."',
         alamat = '".$alamat."'
         where id_siswa= '".$id_siswa."'");
         if($query){

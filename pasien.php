@@ -8,6 +8,7 @@ if (!isset($_SESSION['username'])) {
 $sql = mysqli_query($koneksi, "SELECT * FROM siswa
 inner join kategori on siswa.id_kategori = kategori.id_kategori
 inner join jenis_vaksin on siswa.id_jenis = jenis_vaksin.id_jenis
+inner join jadwal1 on siswa.id_jadwal = jadwal1.id_jadwal
 inner join vaksin_ke on siswa.id_ke = vaksin_ke.id_ke")or die(mysqli_error($koneksi));
 
 ?>
@@ -23,13 +24,10 @@ inner join vaksin_ke on siswa.id_ke = vaksin_ke.id_ke")or die(mysqli_error($kone
                                         <th>No.</th>
                                         <th>NIK</th>
                                         <th>Nama Pasien</th>
-                                        <th>Email</th>
-                                        <th>Lahir</th>
                                         <th>Kelamin</th>
                                         <th>Kategori</th>
                                         <th>Jenis vaksin</th>
                                         <th>Dosis Vaksin</th>
-                                        <th>Alamat</th>
                                         <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -44,14 +42,12 @@ inner join vaksin_ke on siswa.id_ke = vaksin_ke.id_ke")or die(mysqli_error($kone
                                           <td><?php echo $no++; ?></td>
                                           <td><?php echo $data['nis']; ?></td>
                                           <td><?php echo $data['nama']; ?></td>
-                                          <td><?php echo $data['email']; ?></td>
-                                          <td><?php echo $data['tgl_lahir']; ?></td>
                                           <td><?php echo $data['kelamin']; ?></td>
                                           <td><?php echo $data['kategori']; ?></td>
                                           <td><?php echo $data['jenis_vaksin']; ?></td>
                                           <td><?php echo $data['vaksin_ke']; ?></td>
-                                          <td><?php echo $data['alamat']; ?></td>
                                           <td>
+                                          <a href="halaman.php?page=detail&id_siswa=<?php echo $data['id_siswa'] ?>" class="btn btn-warning btn-sm">Detail</a>
                                            <a href="halaman.php?page=edit&id_siswa=<?php echo $data['id_siswa'] ?>" class="btn btn-primary btn-sm">Edit</a>
                                             <a href="delete.php?id_siswa=<?php  echo $data['id_siswa'] ?>"onclick ="return confirm ('anda yakin hapus?')" class="btn btn-danger btn-sm">Hapus</a>
                                           </td>

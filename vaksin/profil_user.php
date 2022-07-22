@@ -128,6 +128,8 @@
             $data_jenis=mysqli_fetch_array($qry4);
             $qry5 = mysqli_query($koneksi, "select * from vaksin_ke where id_ke = '".$data_siswa['id_ke']."'");
             $data_ke=mysqli_fetch_array($qry5);
+            $qry7 = mysqli_query($koneksi, "select * from jadwal1 where id_jadwal = '".$data_siswa['id_jadwal']."'");
+            $data_jadwal=mysqli_fetch_array($qry7);
             ?>
             <div class="card card-user">
               <div class="card-header">
@@ -251,6 +253,22 @@
                     </div>
                   </div>
                   <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Tanggal Vaksin</label>
+                        <select class="form-control" name="jadwal1" required/>
+                            <option value="<?=$data_siswa['id_jadwal']?>"><?=$data_jadwal['tanggal']?></option>
+                            <?php
+                                $qry5=mysqli_query($koneksi, "select * from jadwal1");
+                                while($data_vaksin1=mysqli_fetch_array($qry7)){
+                                    echo '<option value="'.$data_vaksin1['id_jadwal'].'">'.$data_vaksin1['tanggal'].'</option>';
+                                }
+                            ?>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="update ml-auto mr-auto">
                       <button type="submit" class="btn btn-primary btn-round" name="submit">Perbarui Profile</button>
                     </div>
@@ -362,6 +380,7 @@
     $kategori = $_POST['kategori'];
     $jenis = $_POST['jenis_vaksin'];
     $ke = $_POST['vaksin_ke'];
+    $jadwal = $_POST['tanggal'];
     $alamat = $_POST['alamat'];
     $id_siswa = $data_siswa['id_siswa'];
     
@@ -374,6 +393,7 @@
     id_kategori = '".$kategori."',
     id_jenis = '".$jenis."',
     id_ke = '".$ke."',
+    id_jadwal = '".$jadwal."',
     alamat = '".$alamat."'
     where id_siswa = '".$id_siswa."'");
 

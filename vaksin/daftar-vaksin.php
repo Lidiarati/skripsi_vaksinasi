@@ -168,6 +168,22 @@
                   <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
+                        <label>Tanggal Vaksin</label>
+                        <select class="form-control" name="jadwal1" required/>
+                          <option value="">Pilih Tanggal Vaksin</option>
+                          <?php
+                            $qry1=mysqli_query($koneksi, "select * from jadwal1");
+                            while($data_sekolah=mysqli_fetch_array($qry1)){
+                              echo '<option value="'.$data_sekolah["id_jadwal"].'">'.$data_sekolah["tanggal"].'</option>';    
+                            }
+                          ?>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
                         <label>Tanggal Lahir</label>
                         <input
                           type="date"
@@ -228,6 +244,7 @@
         $kategori = $_POST['kategori'];
         $jenis = $_POST['jenis_vaksin'];
         $ke = $_POST['vaksin_ke'];
+        $jadwal = $_POST['jadwal1'];
         $alamat = $_POST['alamat'];
         $lahir = $_POST['tgl_lahir_siswa'];
         
@@ -236,7 +253,7 @@
 
         $ceknis=mysqli_query($koneksi,"select * from siswa where nis = '".$nis."'");
         if(mysqli_num_rows($ceknis)<1){
-          $query = mysqli_query($koneksi, "insert into siswa (nis,nama,tgl_lahir,kelamin,email,tgl_daftar,id_kategori,id_jenis,id_ke,alamat) value
+          $query = mysqli_query($koneksi, "insert into siswa (nis,nama,tgl_lahir,kelamin,email,tgl_daftar,id_kategori,id_jenis,id_ke,id_jadwal,alamat) value
           ('".$nis."',
             '".$nama."',
             '".$lahir."',
@@ -246,6 +263,7 @@
             '".$kategori."',
             '".$jenis."',
             '".$ke."',
+            '".$jadwal."',
             '".$alamat."')");
           if($query){
             echo "<script>Swal.fire({

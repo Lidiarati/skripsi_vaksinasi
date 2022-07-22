@@ -78,7 +78,6 @@
                         <li class="active"><a href="index.php">Home</a></li>
                         <li><a href="vaksin/login.php">Login/Registrasi Pasien</a></li>
                         <li><a href="login_admin.php">Login Admin</a></li>
-                        <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
             </div>
