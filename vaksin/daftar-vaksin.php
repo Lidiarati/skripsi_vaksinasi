@@ -93,7 +93,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>NIK</label>
-                        <input type="text" class="form-control" placeholder="NIK" name="nis_siswa" required/>
+                        <input type="text" class="form-control" placeholder="NIK" name="nis_siswa" maxlength="16" onkeypress="return event.charCode >= 48 && event.charCode <=57" required/>
                       </div>
                     </div>
                   </div>

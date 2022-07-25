@@ -168,7 +168,7 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>NIK</label>
-                        <input type="text" class="form-control" placeholder="NIK" value="<?=$data_siswa['nis']?>" name="nis" required/>
+                        <input type="text" class="form-control" placeholder="NIK" value="<?=$data_siswa['nis']?>" name="nis" maxlength="16" onkeypress="return event.charCode >= 48 && event.charCode <=57" required/>
                       </div>
                     </div>
                   </div>
@@ -272,6 +272,9 @@
                     <div class="update ml-auto mr-auto">
                       <button type="submit" class="btn btn-primary btn-round" name="submit">Perbarui Profile</button>
                     </div>
+                  </div>
+                  <div class="modal-footer">
+                  <a href="bukti.php?id=<?php echo $data_siswa['nis']?>" class="btn btn-warning">Lihat Bukti Pendaftaran</a>
                   </div>
                 </form>
               </div>
@@ -380,7 +383,7 @@
     $kategori = $_POST['kategori'];
     $jenis = $_POST['jenis_vaksin'];
     $ke = $_POST['vaksin_ke'];
-    $jadwal = $_POST['tanggal'];
+    $jadwal = $_POST['jadwal1'];
     $alamat = $_POST['alamat'];
     $id_siswa = $data_siswa['id_siswa'];
     
