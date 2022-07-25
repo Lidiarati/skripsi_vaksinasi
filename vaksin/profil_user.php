@@ -274,7 +274,7 @@
                     </div>
                   </div>
                   <div class="modal-footer">
-                  <a href="bukti.php?id=<?php echo $data_siswa['nis']?>" class="btn btn-warning">Lihat Bukti Pendaftaran</a>
+                  <a href="bukti.php?id=<?php echo $data_siswa['nis']?>" class="btn btn-danger">Lihat Bukti Pendaftaran</a>
                   </div>
                 </form>
               </div>
