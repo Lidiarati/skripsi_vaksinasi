@@ -18,8 +18,6 @@ include('koneksi.php');
                                     <thead>
                                         <tr>
                                         <th>No</th>
-                                        <th>Sesi</th>
-                                        <th>No. Antrian</th>
                                         <th>Waktu</th>
                                         <th>Tanggal</th>
                                         <th>Tempat</th>
@@ -39,8 +37,6 @@ include('koneksi.php');
                                     ?>
                                           <tr>
                                           <td><?php echo $no++; ?></td>
-                                          <td><?php echo $data['sesi']; ?></td>
-                                          <td><?php echo $data['antrian']; ?></td>
                                           <td><?php echo $data['jam']; ?></td>
                                           <td><?php echo $data['tanggal']; ?></td>
                                           <td><?php echo $data['tempat']; ?></td>

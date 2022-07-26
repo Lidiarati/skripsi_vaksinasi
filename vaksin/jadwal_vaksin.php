@@ -152,8 +152,6 @@
                                 ?>
                                 <thead class="text-primary">
                                     <th>No</th>
-                                    <th>Sesi</th>
-                                    <th>No. Antrian</th>
                                     <th>Waktu</th>
                                     <th>Tanggal</th>
                                     <th>Tempat</th>
@@ -165,8 +163,6 @@
                                 ?>
                                     <tr>
                                         <td><?=$no?></td>
-                                        <td><?=$data['sesi']?></td>
-                                        <td><?=$data['antrian']?></td>
                                         <td><?=$data['jam']?></td>
                                         <td><?=$data['tanggal']?></td>
                                         <td><?=$data['tempat']?></td>
