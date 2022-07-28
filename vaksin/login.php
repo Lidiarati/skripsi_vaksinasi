@@ -36,7 +36,7 @@
 			<div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
 				<form class="login100-form validate-form" method="POST" action=>
 					<span class="login100-form-title p-b-55">
-						Login Pasien
+						Masuk Pasien
 					</span>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
@@ -58,7 +58,7 @@
 					
 					<div class="container-login100-form-btn p-t-25">
 						<button class="login100-form-btn" type="submit" name="submit">
-							Login
+							Masuk
 						</button>
 					</div>
 

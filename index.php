@@ -75,9 +75,9 @@
 
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="vaksin/login.php">Login/Registrasi Pasien</a></li>
-                        <li><a href="login_admin.php">Login Admin</a></li>
+                        <li class="active"><a href="index.php">Beranda</a></li>
+                        <li><a href="vaksin/login.php">Masuk Pasien</a></li>
+                        <li><a href="login_admin.php">Masuk Admin</a></li>
                     </ul>
                 </div>
             </div>

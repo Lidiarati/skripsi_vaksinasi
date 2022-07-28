@@ -128,6 +128,7 @@
             <div class="card card-user pb-2">
               <div class="card-header">
                 <h5 class="card-title">Selamat datang <span class="text-danger font-weight-bold"><?=$data_akun['nama']?></span></h5>
+                <p class="font"> peserta wajib mencetak bukti registrasi dan dibawa ke meja pendaftaran sesuai jadwal yang telah ditetapkan.</p>
               </div>
             </div>
             <div class="card card-user">
