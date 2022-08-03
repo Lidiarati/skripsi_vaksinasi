@@ -180,6 +180,22 @@
                         </select>
                       </div>
                     </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Tanggal Vaksin</label>
+                        <select class="form-control" name="jadwal1" required/>
+                          <option value="">Pilih Lokasi Vaksin</option>
+                          <?php
+                            $qry1=mysqli_query($koneksi, "select * from jadwal1");
+                            while($data_sekolah=mysqli_fetch_array($qry1)){
+                              echo '<option value="'.$data_sekolah["id_jadwal"].'">'.$data_sekolah["tempat"].'</option>';    
+                            }
+                          ?>
+                        </select>
+                      </div>
+                    </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">

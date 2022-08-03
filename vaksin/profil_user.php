@@ -269,6 +269,22 @@
                     </div>
                   </div>
                   <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Lokasi Vaksin</label>
+                        <select class="form-control" name="jadwal1" required/>
+                            <option value="<?=$data_siswa['id_jadwal']?>"><?=$data_jadwal['tempat']?></option>
+                            <?php
+                                $qry5=mysqli_query($koneksi, "select * from jadwal1");
+                                while($data_vaksin1=mysqli_fetch_array($qry7)){
+                                    echo '<option value="'.$data_vaksin1['id_jadwal'].'">'.$data_vaksin1['tempat'].'</option>';
+                                }
+                            ?>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
                     <div class="update ml-auto mr-auto">
                       <button type="submit" class="btn btn-primary btn-round" name="submit">Perbarui Profile</button>
                     </div>

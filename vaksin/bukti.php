@@ -93,6 +93,11 @@
            <td>:</td>
            <td><?=$data_siswa['vaksin_ke']?></td>
        </tr>
+       <tr>
+           <td>Lokasi Vaksin</td>
+           <td>:</td>
+           <td><?=$data_siswa['tempat']?></td>
+       </tr>
    </table>
 </body>
 </html>
